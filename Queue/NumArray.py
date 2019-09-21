@@ -10,8 +10,8 @@ class NumArray(object):
         :type nums: List[int]
         """
         self.lst = [0]
-        for i in range(len(nums)):
-            self.lst.append(self.lst[-1]+nums[i])
+        for num in nums:
+            self.lst.append(self.lst[-1]+num)
 
     def sumRange(self, i, j):
         """
