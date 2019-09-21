@@ -2,6 +2,8 @@
 # Idea:
 # 32-bit signed int: [-2^31 : 2^31-1] : ^31 因为他是signed int， -1 因为有0
 # 从右往左，个位十位, be aware of overflow
+# Time : O(n)
+# Space : O(n+1) == O(n)
 class Solution(object):
     def reverse(self, x):
         """
