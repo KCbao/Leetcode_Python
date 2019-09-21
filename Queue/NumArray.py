@@ -1,8 +1,8 @@
 # Question 303
 # Idea: 
 # Construct a new array of up-to-point sum, and we can query as many times as we want in the future
-# Time: 98.85%
-# Memory: <=7.95%
+# Time complexity: O(n) 造新arr的时间
+# Auxilary Memory: O(n) 新的arr
 class NumArray(object):
 
     def __init__(self, nums):
