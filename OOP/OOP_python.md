@@ -351,6 +351,7 @@ Data types	Static typed	Dynamically typed
 Data Science & machine learning applications	Average	Very Good
 
 ## 18. Static versus class method 
+```
 class Date:
   def __init__(self, month, day, year):
     self.month = month
@@ -369,7 +370,7 @@ class Date:
 new_year = Date(1, 1, 2013)               # Creates a new Date object
 millenium_new_year = Date.millenium(1, 1) # also creates a Date object. 
 
-# Proof:
+% Proof:
 new_year.display()           # "1-1-2013"
 millenium_new_year.display() # "1-1-2000"
 
@@ -405,3 +406,4 @@ isinstance(datetime2, DateTime) # True
 
 datetime1.display() # "10-10-1990 - 00:00:00PM"
 datetime2.display() # "10-10-2000 - 00:00:00PM"
+```
