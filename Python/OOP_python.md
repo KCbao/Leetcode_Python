@@ -82,7 +82,7 @@ print(myObject._MyClass__hiddenVariable)
 
 ## 6 . What is Polymorphism?
 - means same function name (but different signatures) being uses for different types / forms.
-
+- simple example: len can be used for a str and for a list
 - Polymorphism with Inheritance:  Method Overriding
 ```
 class Bird: 
@@ -160,7 +160,8 @@ USA is a developed country.
 
 ## 7 . What is Inheritance?
 Inheritance is a concept where one class shares the structure and behavior defined in another class. Ifinheritance applied on one class is called Single Inheritance, and if it depends on multiple classes, then it is called multiple Inheritance.
-
+- what is object class?
+in Python 3, class Test(object) === calss Test()
 -  Check if inheritance exists?
 ```
 class Base(object): 
@@ -299,7 +300,8 @@ Destructor called
 - 问题: add two objects with binary ‘+’ throws an error, because compiler don’t know how to add two objects. 
 - fix: when use + operator, the magic method __add__ is automatically invoked in which the operation for + operator is defined
 - We can overload all existing operators but we can’t create a new operator
-- class A: 
+```
+class A: 
     def __init__(self, a): 
         self.a = a 
   
@@ -313,7 +315,7 @@ ob4 = A("For")
   
 print(ob1 + ob2) : 3
 print(ob3 + ob4) : Geeks For
-
+```
 ## Abstract class
 - considered as a blueprint for other classes, allows you to create a set of methods that must be created within any child classes built from your abstract class, 当subclass inherit parent class, it knows the structure of methods
 from abc import ABC, abstractmethod 
@@ -410,4 +412,23 @@ isinstance(datetime2, DateTime) # True
 
 datetime1.display() # "10-10-1990 - 00:00:00PM"
 datetime2.display() # "10-10-2000 - 00:00:00PM"
+```
+
+## class vs static variables
+- class/static variables: shared by all objects
+- nonstatic variables: different for different objects (each obj has a copy of it)
+```
+class CSStudent():
+    stream = 'cse' # class variable
+
+    def __init__(self, name, roll):
+        self.name = name
+        self.roll = roll # those are instance variable
+a = CSStudent('geek1', 1)
+a.stream = 'cse'
+
+b = CSStudent('geek1', 1)
+b.stream = 'cse'
+
+CSStudent.stream: # 'cse': class variable can be accessed by class name
 ```
