@@ -32,7 +32,6 @@ public methods	Accessible from anywhere
 private methods	Accessible only in their own class. starts with two underscores
 
 class Car:
-
     def __init__(self):
         self.__updateSoftware()
 
@@ -52,7 +51,6 @@ public variables	Accessible from anywhere
 private variables	Accesible only in their own class or by a method if defined. starts with two underscores
 
 class MyClass: 
-  
     # Hidden member of MyClass 
     __hiddenVariable = 0
     
