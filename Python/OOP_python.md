@@ -414,7 +414,7 @@ datetime1.display() # "10-10-1990 - 00:00:00PM"
 datetime2.display() # "10-10-2000 - 00:00:00PM"
 ```
 
-## class vs static variables
+## 19. class vs static variables
 - class/static variables: shared by all objects
 - nonstatic variables: different for different objects (each obj has a copy of it)
 ```

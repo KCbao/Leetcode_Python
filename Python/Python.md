@@ -1,10 +1,10 @@
-## Create empty class
+## 1. Create empty class
 ```
 class Test:
     pass
 ```
 
-## str vs repr
+## 2. str vs repr
 ```
 class Test: 
     def __init__(self, a, b): 
