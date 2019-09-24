@@ -1,4 +1,4 @@
-## What is OOPS?
+## 1. What is OOPS?
 - Object Oriented Programming system in which programs are considered as a collection of objects. 
 - Each object contains data (attributes) and code (methods/procedures).
 - an object's procedures that can access and often modify the data fields of the object.
