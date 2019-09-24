@@ -248,7 +248,7 @@ class Derived(Base):
   ## 9. Define a constructor?
 - used to initialize the state of an object, and it gets invoked at the time of object creation. Constructor must have no return type
 - def __init__(self):
-    # body of the constructor
+    % body of the constructor
 - Types of constructors :
 1. default constructor : doesn’t accept any arguments.
 def __init__(self): 
@@ -261,15 +261,15 @@ def __init__(self, f, s):
 ## 10. Define Destructor?
 - Destructor is a method which is automatically called after the program ended or when all the references to object are deleted i.e when the reference count becomes zero, not when object went out of scope.
 - def __del__(self):
-  # body of destructor
+  % body of destructor
 
 - class Employee: 
   
-    # Initializing  
+    % Initializing  
     def __init__(self): 
         print('Employee created') 
   
-    # Calling destructor 
+    % Calling destructor 
     def __del__(self): 
         print("Destructor called") 
   
@@ -300,7 +300,7 @@ Destructor called
     def __init__(self, a): 
         self.a = a 
   
-    # adding two objects  
+    % adding two objects  
     def __add__(self, o): 
         return self.a + o.a  
 ob1 = A(1) 
