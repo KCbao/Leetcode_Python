@@ -30,7 +30,7 @@ The users of a class do not know how the class stores its data. A class can chan
 - Methods:
 public methods	Accessible from anywhere
 private methods	Accessible only in their own class. starts with two underscores
-
+```
 class Car:
     def __init__(self):
         self.__updateSoftware()
@@ -44,12 +44,12 @@ class Car:
 redcar = Car()
 redcar.drive()
 #redcar.__updateSoftware()  not accesible from object.
-
+```
 
 - Variables:
 public variables	Accessible from anywhere
 private variables	Accesible only in their own class or by a method if defined. starts with two underscores
-
+```
 class MyClass: 
     # Hidden member of MyClass 
     __hiddenVariable = 0
@@ -78,12 +78,13 @@ AttributeError: MyClass instance has no attribute '__hiddenVariable'
 % Access hidden variable
 myObject = MyClass()      
 print(myObject._MyClass__hiddenVariable) 
-
+```
 
 ## 6 . What is Polymorphism?
 - means same function name (but different signatures) being uses for different types / forms.
 
 - Polymorphism with Inheritance:  Method Overriding
+```
 class Bird: 
   def intro(self): 
     print("There are many types of birds.") 
@@ -107,13 +108,13 @@ obj_spr.intro()
 obj_spr.flight() 
 There are many types of birds.
 Sparrows can fly.
-
+```
 
 - Polymorphism with a Function and objects (i.e., Python uses "duck typing" for classes)
 1. create a function that can take any object, allowing for polymorphism
 2. Duck-typing: if it walks, quacks like a duck, then it is a duck
 我们可以编写一个函数，它接受一个类型为"鸭子"的对象，并调用它的"走"和"叫"方法。在使用鸭子类型的语言中，这样的一个函数可以接受一个任意类型的对象，并调用它的"走"和"叫"方法。如果这些需要被调用的方法不存在，那么将引发一个运行时错误。
-
+```
 class India(): 
     def capital(self): 
         print("New Delhi is the capital of India.") 
@@ -155,12 +156,13 @@ India is a developing country.
 Washington, D.C. is the capital of USA.
 English is the primary language of USA.
 USA is a developed country.
-
+```
 
 ## 7 . What is Inheritance?
 Inheritance is a concept where one class shares the structure and behavior defined in another class. Ifinheritance applied on one class is called Single Inheritance, and if it depends on multiple classes, then it is called multiple Inheritance.
 
 -  Check if inheritance exists?
+```
 class Base(object): 
     pass   # Empty Class 
 class Derived(Base): 
@@ -178,9 +180,9 @@ print(isinstance(b, Derived)) # False
   
 % But d is an instance of Base 
 print(isinstance(d, Base))  # True
-
+```
 - Multiple inheritance:
-
+```
 class Base1(object): 
     def __init__(self): 
         self.str1 = "Geek1"
@@ -206,12 +208,12 @@ class Derived(Base1, Base2):
   
 ob = Derived() : Based 1, Base 2, Derived
 ob.printStrs() : ('Geek1', 'Geek2')
-
+```
 
 - Access parent class in a subclass
 
 1. Use Parent class name
-
+```
 class Base(object): 
   
     # Constructor 
@@ -229,9 +231,10 @@ class Derived(Base):
        
        # print(self.x, self.y) will also work 
        print(Base.x, self.y) 
+```
 
-
-2. Using super()  
+2. Using super()
+```  
 class Derived(Base): 
   
     # Constructor 
@@ -243,7 +246,7 @@ class Derived(Base):
        # Note that Base.x won't work here 
        # because super() is used in constructor 
        print(self.x, self.y) 
-  
+ ``` 
   
   ## 9. Define a constructor?
 - used to initialize the state of an object, and it gets invoked at the time of object creation. Constructor must have no return type
@@ -262,8 +265,8 @@ def __init__(self, f, s):
 - Destructor is a method which is automatically called after the program ended or when all the references to object are deleted i.e when the reference count becomes zero, not when object went out of scope.
 - def __del__(self):
   % body of destructor
-
-- class Employee: 
+```
+class Employee: 
   
     % Initializing  
     def __init__(self): 
@@ -289,7 +292,7 @@ Employee created
 function end...
 Program End...
 Destructor called
-
+```
 ## 12. What is operator overloading?
 - giving extended meaning beyond their predefined operational meaning.
 - e.g., operator + is used to add two integers as well as join two strings and merge two lists.
@@ -314,6 +317,7 @@ print(ob3 + ob4) : Geeks For
 ## Abstract class
 - considered as a blueprint for other classes, allows you to create a set of methods that must be created within any child classes built from your abstract class, 当subclass inherit parent class, it knows the structure of methods
 from abc import ABC, abstractmethod 
+```
 class Animal(ABC): 
   
     def move(self): 
@@ -335,7 +339,7 @@ R.move()
   
 K = Snake() 
 K.move() 
-  
+``` 
 ## 15. What is exception handling?
 Exception is an event that occurs during the execution of a program. Exceptions can be of any type — Run time exception, Error exceptions. Those exceptions are handled properly through exception handling mechanism like try, catch and throw keywords.
 
