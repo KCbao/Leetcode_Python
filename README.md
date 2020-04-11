@@ -3,4 +3,4 @@
 - This is a repo for my personal training/practice on leetcode.
 
 - Timeline: 
-6
+As up to April 11, 2020 - 57
