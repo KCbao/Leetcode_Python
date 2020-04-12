@@ -5,7 +5,10 @@
 - Timeline: 
 As up to April 11, 2020 - 57
 
-Linked List:
+### List:
+- `sorted(range(len(prices)), key=lambda k: prices[k])`
+
+### Linked List:
 - For array, memory has to be allocated in advance for a specific number of items in an array, when less items to fill all array index, memory space is wasted; when add or remove an item in array, memory locations has to be updated
 - For linked list, whenever a new item is required to be added to the linked list, the memory for the new node is created at run time. for each item in memory location, linked list stores value of the item and the pointer to the next item. 
 - 
