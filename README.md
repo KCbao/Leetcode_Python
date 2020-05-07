@@ -4,6 +4,7 @@
 
 - Timeline: 
 As up to April 11, 2020 - 57
+As up to May 6, 2020 - 67
 
 ### List:
 - `sorted(range(len(prices)), key=lambda k: prices[k])`
